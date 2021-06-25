@@ -1,2 +1,3 @@
 Texto escrito desde main
 Esta línea la agragamos en la rama prueba_2
+ya estamos en github listos para trabajar
