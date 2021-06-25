@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-hola mundo
-=======
 Este es el clase1-sintaxis
->>>>>>> clase-1-sintaxis
+
+Hola mundogit chec
