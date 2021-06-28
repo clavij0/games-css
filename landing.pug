@@ -1,43 +1,23 @@
--var titulo = "Sub-título Principal "
--var titulos = ["Título Principal", "Subtitulo 1", "Subtitulo 2", "Subtitulo 3"]
--var usuario = "Awarai"
-mixin caja(imagen,titulo,contenido)
-    .caja 
-        .caja__imagen: img(src="./images/"+imagen)
-        .caja__contenido 
-            h3=titulo 
-            p=contenido
-            a.buton Leer Mas 
-doctype html 
-html 
-    head 
-        meta(charset="UFT-8")
-        link(rel="stylesheet", href="./css/ejercicio-pug.css")
-    body 
-        header 
-            h1  PlatziGames
-            if usuario 
-                a Hola #{usuario}
-            else 
-                a.boton Registro
-        section.intro
-            .intro__imagen: img(src="./images/imagen.png", alt="")
-            .intro__contenido 
-                h2 #{titulos[0]} 
-                p
-                    | Lorem ipsum, dolor sit amet consectetur adipisicing
-                    | elit. Similique mollitia deleniti liber.
-                    | exercitationem illo soluta voluptatem, excepturi
-                    | reiciendis quisquam vitae, veritatis nihil.
-                    | perferendis ut expedita aut ipsum quod? Maiores
-               
-                    span Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta possimus ipsam blanditiis quae quo! Praesentium, repudiandae voluptatem excepturi officiis in nesciunt velit optio qui magnam explicabo, deserunt, tempora omnis a!
-                a.boton Leer Mas
+extend componentes/plantilla.pug
+block contenidos
+    section.intro
+        .intro__imagen: img(src="./images/imagen.png", alt="")
+        .intro__contenido 
+            h2 #{titulos[0]} 
+            p
+                | Lorem ipsum, dolor sit amet consectetur adipisicing
+                | elit. Similique mollitia deleniti liber.
+                | exercitationem illo soluta voluptatem, excepturi
+                | reiciendis quisquam vitae, veritatis nihil.
+                | perferendis ut expedita aut ipsum quod? Maiores
+            
+                span Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta possimus ipsam blanditiis quae quo! Praesentium, repudiandae voluptatem excepturi officiis in nesciunt velit optio qui magnam explicabo, deserunt, tempora omnis a!
+            a.boton Leer Mas
         ul 
             each  titulo in titulos 
                 li=titulo 
-        main.contenido 
-            +caja("imagen.png",titulos[1],'Lorem ipsum dolor sit amet consectetur adipisicin')
-            +caja("imagen.png",titulos[2],'Lorem ipsum dolor sit amet consectetur adipisicin')
-            +caja("imagen.png",titulos[3],'Lorem ipsum dolor sit amet consectetur adipisicin')
+    main.contenido 
+        +caja("imagen.png",titulos[1],'Lorem ipsum dolor sit amet consectetur adipisicin')
+        +caja("imagen.png",titulos[2],'Lorem ipsum dolor sit amet consectetur adipisicin')
+        +caja("imagen.png",titulos[3],'Lorem ipsum dolor sit amet consectetur adipisicin')
 
